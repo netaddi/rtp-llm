@@ -85,10 +85,15 @@ def torch_deps():
             "@torch_2.3_py310_cpu_aarch64//:torch",
             "@torch_2.3_py310_cpu_aarch64//:torch_libs",
         ],
-        "@//:using_cuda": [
+        "@//:cuda_not_12_9": [
             "@torch_2.6_py310_cuda//:torch_api",
             "@torch_2.6_py310_cuda//:torch",
             "@torch_2.6_py310_cuda//:torch_libs",
+        ],
+        "@//:using_cuda12_9": [
+            "@torch_2.8_py310_cuda//:torch_api",
+            "@torch_2.8_py310_cuda//:torch",
+            "@torch_2.8_py310_cuda//:torch_libs",
         ],
         "//conditions:default": [
             "@torch_2.1_py310_cpu//:torch_api",

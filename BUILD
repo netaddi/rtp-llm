@@ -17,6 +17,16 @@ config_setting(
     values = {"define": "using_cuda12=true"},
 )
 
+config_setting(
+    name = "using_cuda12_9",
+    define_values = {"using_cuda12": "true", "using_cuda12_9": "true"},
+)
+
+config_setting(
+    name = "cuda_not_12_9",
+    define_values = {"using_cuda12": "true", "using_cuda12_9": "false"},
+)
+
 
 config_setting(
     name = "using_rocm",
@@ -94,6 +104,10 @@ py_runtime(
     python_version = "PY3",
     stub_shebang = "#!/opt/conda310/bin/python"
 )
+
+# DeepGEMM alias for integration
+load("//bazel:arch_select.bzl", "deep_gemm_deps")
+deep_gemm_deps()
 
 load("@hedron_compile_commands//:refresh_compile_commands.bzl", "refresh_compile_commands")
 

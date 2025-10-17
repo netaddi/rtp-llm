@@ -28,7 +28,11 @@
 #include <ATen/cuda/CUDAContext.h>
 #include <cuda_fp16.h>
 #include <cuda_runtime.h>
+#if CUDA_VERSION >= 12090
+#include <nvtx3/nvToolsExt.h>
+#else
 #include <nvToolsExt.h>
+#endif
 #endif
 #if USING_ROCM
 #include <hip/hip_runtime.h>

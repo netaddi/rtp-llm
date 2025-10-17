@@ -24,7 +24,6 @@
     "reportUnknownParameterType": "warning",
     "reportUnknownVariableType": "warning",
     "useLibraryCodeForTypes": true,
-    "reportMissingImports": true,
     "reportMissingTypeStubs": false,
     "reportGeneralTypeIssues": "warning",
     "pythonVersion": "3.10"
