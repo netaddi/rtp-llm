@@ -24,6 +24,7 @@
 #include <vector>
 
 #if USING_CUDA
+#include <cuda.h>
 #include "torch/csrc/cuda/Stream.h"
 #include <ATen/cuda/CUDAContext.h>
 #include <cuda_fp16.h>
