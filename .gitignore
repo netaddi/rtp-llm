@@ -74,3 +74,5 @@ git.diff
 .doctrees/
 node_modules/
 docs/index/dist/
+
+stub_source
